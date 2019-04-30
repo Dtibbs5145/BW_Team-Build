@@ -1,12 +1,20 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: []
+    };
+  }
 
-    </div>
-  );
+  componentDidMount() {
+    axios.get('https://lambda-team-builder.herokuapp.com')
+    .then(res => {this.setState({products: res.data }) })
+    .catch(err => console.log(err));
+  }
 }
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getMaxListeners } from 'cluster';
 
 const Product = prop => {
     return (

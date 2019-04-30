@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class Products extends React.Component {
-    constructor() {
-        super();
+class Register extends React.Component {
+    constructor(props) {
+        super(props);
         this.state = {
             products: [],
             name: '',
@@ -10,7 +10,6 @@ class Products extends React.Component {
             password: ''
         }
     }
+
+
 }
-
-
-// list over product
