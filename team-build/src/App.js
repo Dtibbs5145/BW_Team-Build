@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios';
+import { Route, Link } from 'react-router-dom';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+// import Products from './components/Products/Products';
+// import Product from './components/Products/Product';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +19,19 @@ class App extends React.Component {
     axios.get('https://lambda-team-builder.herokuapp.com')
     .then(res => {this.setState({products: res.data }) })
     .catch(err => console.log(err));
+  }
+
+  render() {
+    return (
+      <div>
+        <div>
+          <Link to='/'>Home</Link>
+          <Link to='/login'>Login</Link>
+        </div>
+        <Route exact path='/' component={Register} />
+        <Route path='/login' component={Login}/>
+      </div>
+    )
   }
 }
 

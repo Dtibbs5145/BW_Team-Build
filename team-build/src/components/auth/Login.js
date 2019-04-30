@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 class Login extends React.Component {
     constructor(props) {
@@ -9,6 +9,16 @@ class Login extends React.Component {
             password: ''
         }
     }
+
+    render() {
+        return (
+            <div>
+                <h1>Login Page</h1>
+            </div>
+        )
+    }
     
     
 }
+
+export default Login;

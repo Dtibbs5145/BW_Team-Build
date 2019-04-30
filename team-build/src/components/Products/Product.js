@@ -1,5 +1,4 @@
 import React from 'react';
-import { getMaxListeners } from 'cluster';
 
 const Product = prop => {
     return (
@@ -8,3 +7,5 @@ const Product = prop => {
         </div>
     )
 }
+
+export default Product;
